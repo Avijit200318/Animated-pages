@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "freight big pro";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* display: none; */
+}
+
+#yellow1,
+#yellow2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: yellow;
+    z-index: 8;
+}
+
+#yellow2 {
+    z-index: 7,
+}
+
+#loader h1 {
+    font-size: 6vw;
+    line-height: 5vw;
+    letter-spacing: -3px;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+}
+
+#loader video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#nav {
+    width: 100%;
+    padding: 30px 40px;
+    position: absolute;
+    z-index: 10;
+}
+
+/* to change the color of a svg */
+
+#nav svg path {
+    fill: #000;
+}
+
+#main {
+    background: black;
+}
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 6vw;
+    line-height: 5vw;
+    letter-spacing: -3px;
+    font-weight: 100;
+}
+
+#page2 {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.elem {
+    width: 100%;
+    position: relative;
+}
+
+.elem .blur {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, yellow, yellow, yellow);
+    box-shadow: 10px 0px 20px 20px yellow;
+    height: 100%;
+    z-index: 8;
+}
+
+.elem h2 {
+    font-size: 6.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    z-index: 99;
+    line-height: 5vw;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.elem .moving {
+    background: yellow;
+    width: 100%;
+    white-space: nowrap;
+    padding: 5px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -45%) scaleY(0);
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+    overflow: hidden;
+}
+
+.elem .moving .moving-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation: moving 4s infinite linear;
+    /* animation-name: moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+}
+
+.elem .moving .moving-in h5 {
+    display: inline-block;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    opacity: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.elem:hover .moving {
+    /* when elem is hover then add css in the moving which is inside the elem */
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+    opacity: 1;
+}
+
+.elem:hover h2 {
+    font-style: italic;
+    color: black;
+}
+
+#page3 {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.image-container {
+    padding: 30px;
+    display: flex;
+    justify-content: start;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.image-div {
+    width: 100%;
+    background: red;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2.4vw;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+
+.image-div:hover .overlay {
+    background: #000;
+    color: white;
+}
+
+.image-div:hover img {
+    scale: 1.1;
+}
+
+.line{
+    width: 32.3%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.footer{
+    width: 100%;
+    height: 40vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+#foot{
+    height: 50%;
+    width: 100%;
+    background: black;
+    color: white;
+}
+.footer h2{
+    font-family: gilroy;
+    text-transform: uppercase;
+    font-size: 1vw;
+    cursor: pointer;
+}
