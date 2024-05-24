@@ -3,31 +3,29 @@ import gsap from 'gsap'
 import React, { useRef, useState } from 'react'
 
 export default function App() {
-  const [circle, setCircle] = useState(0);
-  const random = gsap.utils.random(-500, 500, 100);
-  console.log(random);
-  
-  // useGSAP(() => {
-  //   gsap.from(".box", {
-  //     rotate: 360,
-  //     scale: 0,
-  //     duration: 1,
-  //     opacity: 0,
-  //     delay: 0.5
-  //   })
-  // },{scope: ".container"})
+  const [xValue, setXValue] = useState(0);
+  const [rotateX, setRotateX] = useState(0);
+  const boxRef = useRef();
+  const randomX = gsap.utils.random(-500, 500, 100);
+  const randomRotate = gsap.utils.random(-360, 360, 30);
+
 
   useGSAP(() => {
-    gsap.to(".circle", {
-      x: circle,
-      duration: 0.5
+    gsap.to( boxRef.current, {
+      x: xValue,
+      duration: 1,
+      rotate: rotateX
     })
-  }, [circle])
+  }, [xValue, rotateX])
+
+  // but if we want to use scope and dependencies then we need to write the last line like this .
+  // }, {scope: "main", dependencies: [xValue, rotateX]});
 
   return (
     <main>
-      <button onClick={()=> setCircle(random)} >Animate</button>
-      <div className="circle"></div>
+      <button onClick={()=>{ setXValue(randomX)
+        setRotateX(randomRotate)}} >Animate</button>
+      <div ref={boxRef} className="box"></div>
     </main>
   )
 }
