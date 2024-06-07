@@ -227,7 +227,8 @@ nav i {
     .three .card {
         height: 57vh;
     }
-    .card button{
+
+    .card button {
         padding: 0.5rem 1rem;
         font-size: 1rem;
         font-weight: bold;
@@ -336,10 +337,6 @@ nav i {
 
 
 @media (max-width: 620px) {
-    #fanta {
-        width: 20rem;
-    }
-
     #orange-cut {
         top: 30%;
     }
@@ -378,7 +375,7 @@ nav i {
 
 @media (max-width: 600px) {
     #orange-cut {
-        top: 27%;
+        top: 31%;
         left: 30%;
     }
 
@@ -387,7 +384,9 @@ nav i {
     }
 
     #orange {
-        width: 9rem;
+        width: 8rem;
+        right: 28%;
+        top: 53%;
     }
 
     #leaf {
@@ -403,9 +402,13 @@ nav i {
 
 @media (max-width: 550px) {
     #orange-cut {
-        top: 27%;
-        left: 26%;
+        top: 31%;
+        left: 32%;
         width: 8rem;
+    }
+
+    #orange {
+        width: 7.5rem;
     }
 
     .two {
@@ -448,13 +451,28 @@ nav i {
         z-index: 2;
         width: 12rem;
     }
-    .card h1{
+
+    .card h1 {
         font-size: 1.4rem;
     }
 }
 
 
 @media (max-width: 460px) {
+    #fanta {
+        width: 13rem !important;
+    }
+
+    #orange-cut {
+        top: 35%;
+        left: 29%;
+        width: 7rem;
+    }
+
+    #orange {
+        right: 25%;
+    }
+
     #leaf {
         width: 8rem;
         top: 16%;
@@ -473,7 +491,7 @@ nav i {
 
     #cocacola {
         width: 7rem;
-        top:5%;
+        top: 5%;
     }
 
     .lemon2,
@@ -498,12 +516,14 @@ nav i {
     }
 
     #orange-cut {
-        left: 23%;
+        left: 30%;
     }
+
     #leaf2 {
         left: 70%;
         top: 75%;
     }
+
     #cocacola {
         width: 6rem;
         top: 15%;
@@ -519,10 +539,26 @@ nav i {
         width: 9.5rem;
         top: 11%;
     }
-    .card h1{
+
+    .card h1 {
         font-size: 1.1rem;
     }
-    .card button{
+
+    .card button {
         font-weight: normal;
+    }
+}
+
+@media (max-width: 400px) {
+    #orange-cut {
+        left: 30%;
+        width: 6rem;
+        top: 34%;
+    }
+    #leaf{
+        top: 20%;
+    }
+    #leaf2{
+        top: 71%;
     }
 }
