@@ -416,7 +416,7 @@ nav i {
     }
 
     .left-two {
-        background: yellow;
+        background: #4b3816;
         height: 50%;
         width: 100%;
     }
@@ -460,7 +460,7 @@ nav i {
 
 @media (max-width: 460px) {
     #fanta {
-        width: 13rem !important;
+        width: 13rem;
     }
 
     #orange-cut {
@@ -553,12 +553,14 @@ nav i {
     #orange-cut {
         left: 30%;
         width: 6rem;
-        top: 34%;
+        top: 36%;
     }
-    #leaf{
+
+    #leaf {
         top: 20%;
     }
-    #leaf2{
+
+    #leaf2 {
         top: 71%;
     }
 }
