@@ -227,12 +227,29 @@ mm.add("(max-width: 400px)", () => {
         left: "5%"
     }, 'orange')
 
+    tl.to("#leaf", {
+        left: "55%"
+    }, 'orange')
+
     tl2.to("#fanta", {
         width: "57%",
         left: "24%",
         top: "236%",
     }, 'lemon')
+
     tl2.to("#orange-cut", {
         top: "228%",
+    }, 'lemon')
+})
+
+mm.add("(max-width: 360px)", () => {
+    tl2.to("#fanta", {
+        width: "60%",
+        left: "23%",
+        top: "237%",
+    }, 'lemon')
+
+    tl2.to("#orange-cut", {
+        top: "229%",
     }, 'lemon')
 })
