@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="w-full bg-zinc-900">
+        <!-- <div class="parent relative w-full h-[700vh] bg-zinc-800"> -->
+        <div class="parent relative top-0 left-0 w-full h-[700vh]">
+            <!-- <div class="w-full h-full bg-zinc-400 sticky top-0 left-0"></div> -->
+            <div class="w-full cnav h-screen sticky top-0 left-0">
+                <canvas class="w-full h-screen" id="frame"></canvas>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const canvas = document.querySelector("canvas");
+    const context = canvas.getContext("2d");
+    // context is important to perform any thing in canvas
+
+    const frames = {
+        currentIndex: 0,
+        maxIndex: 382
+    };
+
+    let imagesLoad = 0;
+    const images = [];
+
+    const preloadImage = () => {
+        for(var i = 1; i<= frames.maxIndex; i++){
+            const imageUrl = `./images/frame_${i.toString().padStart(4, "0")}.jpeg`;
+            // console.log(imageUrl);
+
+            // create a blank image tag which didnot have and src.
+            const img = new Image();
+            img.src = imageUrl;
+            // console.log(img);
+            img.onload = () => {
+                imagesLoad++;
+                if(imagesLoad === frames.maxIndex){
+                    // console.log("all images loaded");
+                    loadImage(frames.currentIndex);
+                    startAnimation();
+                }
+            }
+            images.push(img);
+        }
+    }
+
+    const loadImage = (index) => {
+        if(index >= 0 && index <= frames.maxIndex){
+            const img = images[index];
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            // properly set image in canvas using aspect ratio
+            const scaleX = canvas.width / img.width;
+            const scaleY = canvas.height / img.height;
+            const scale = Math.max(scaleX, scaleY);
+
+            const newWidth = img.width * scale;
+            const newHeight = img.height * scale;
+
+
+            // set offset X so the image alsways shows from the center
+            const offsetX = (canvas.width - newWidth)/2;
+            const offsetY = (canvas.height - newHeight)/2;
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.imageSmoothingEnabled = true;
+            context.imageSmoothingQuality = "high";
+            context.drawImage(img, offsetX, offsetY, newWidth, newHeight);
+            frames.currentIndex = index;
+        }
+    }
+
+    const startAnimation = () => {
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".parent",
+                start: "top top",
+                scrub: 2,
+                markers: true
+            }
+        });
+
+        tl.to(frames, {
+            currentIndex: frames.maxIndex,
+            onUpdate: function(){
+                loadImage(Math.floor(frames.currentIndex))
+            }
+        })
+    }
+
+    preloadImage();
+</script>
+
+</html>
