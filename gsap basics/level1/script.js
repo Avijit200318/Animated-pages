@@ -1,12 +1,12 @@
 var tl = gsap.timeline();
 tl.from("header", {
     y: -100,
-    duration: 0.3,
+    duration: 0.2,
 })
-tl.from(".middleBox", {
+tl.from(".middleBox a", {
     opcity: 0,
     y: -50,
-    stagger: 1,
+    stagger: 0.1,
 })
 tl.from(".rightBox", {
     y: -100,
@@ -14,7 +14,7 @@ tl.from(".rightBox", {
 })
 tl.from(".left h2", {
     opacity: 0,
-    duration: 0.3,
+    duration: 0.2,
     y: -30,
     delay: 0.5
 })
