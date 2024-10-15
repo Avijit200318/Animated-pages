@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	margin:0;
+	background:orange;
+	overflow-x:hidden;
+    font-family: sans-serif;
+}
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+}
+
+.races {
+	width:fit-content;
+    /* width */
+	display:flex;
+    align-items: center;
+	flex-wrap:nowrap;
+}
+
+.races h2 {
+	font-size:30vw;
+	padding-right:0.3em;
+	padding-left:0.3em;
+	color: black;
+    background: lightblue;
+}
+
+.page3{
+	height:100vh;
+	background:#313143;
+}
