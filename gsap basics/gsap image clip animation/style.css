@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page1{
+    width: 100%;
+    padding: 15vh;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page1 h1{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-family: "Playwrite GB S", cursive;
+    font-style: italic;
+    width: 70%;
+    z-index: 1;
+}
+
+.ad{
+    width: 600px;
+    height: 600px;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msk{
+    width: 550px;
+    height: 550px;
+    clip-path: circle(0% at 50% 50%);
+}
+
+.msk img{
+    width: 550px;
+    height: 550px;
+    border-radius: 20px;
+}
+
+.page2{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
