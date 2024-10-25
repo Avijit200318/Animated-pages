@@ -1,0 +1,52 @@
+@font-face {
+    font-family: newFont;
+    src: url(./fonts/production-demo.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page1, .page2, .page3{
+    width: 100%;
+    height: 100vh;
+}
+
+.strip{
+    width: 300%;
+    /* for smooth animation */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 3s;
+}
+
+.page2 h1{
+    color: #fff;
+    font-family: newFont;
+    font-size: 10.5rem;
+    line-height: 12rem;
+    pointer-events: none;
+}
+
+h1 span{
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+/* all odd element. 2n -> 2, 4 all the right's */
+.strip:nth-child(2n){
+    margin-left: -100%;
+}
+
