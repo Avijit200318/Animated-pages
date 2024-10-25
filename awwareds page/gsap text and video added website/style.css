@@ -1,0 +1,148 @@
+@font-face {
+    font-family: newFont;
+    src: url(./fonts/Zuume\ Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+}
+
+.lft img{
+    width: 6rem;
+}
+
+.mid{
+    color: #fff;
+    display: flex;
+    gap: 2rem;
+}
+
+.mid a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.mid a:hover{
+    background: #616115;
+    color: yellow;
+}
+
+a{
+    text-decoration: none;
+}
+
+.rht button{
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.left, .right{
+    width: 50%;
+    height: 100vh;
+}
+
+.right, .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right video{
+    width: 100%;
+}
+
+.left h1{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: url("./image/textgif.webp");
+    background-repeat: no-repeat;
+    line-height: 150px;
+    font-size: 11rem;
+    font-family: newFont;
+}
+
+.left p{
+    width: 32vw;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.btnContainer{
+    display: flex;
+    gap: 2rem;
+}
+
+.btnContainer button{
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btnContainer button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 50% 50%);
+    background: #6060e2;
+    z-index: -1;
+}
+
+.btnContainer button:hover::after{
+    clip-path: circle(100% at 50% 50%);
+    transition: 0.75s;
+}
+
+.btnContainer button:hover{
+    color: white;
+}
