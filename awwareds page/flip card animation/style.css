@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100vh;
+    perspective: 2000px;
+    /* to make the 3d dimension */
+}
+
+.card{
+    position: relative;
+    width: 20rem;
+    height: 28rem;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: antiquewhite;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1.2rem;
+}
+
+.back{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    /* this propety hide the backside style of the card. so if we rotate the card 180deg then we see nothing. add it to any one of the div either front or back */
+
+    background-image: url('https://images.unsplash.com/photo-1727931980729-8e91789fcf06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D');
+    background-size: cover;
+    background-position: center;
+}
+
+.front .line{
+    width: 90%;
+    height: 2px;
+    background-color: #333;
+}
+
+.front h4{
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.front h1{
+    margin-top: 80%;
+    font-size: 3rem;
+}
