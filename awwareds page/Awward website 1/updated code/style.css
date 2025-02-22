@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+/* updated code */
+.page1{
+    width: 100%;
+    height: 100vh;
+    color: black;
+}
+
+.page1 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+nav{
+    width: 100%;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem 0 6rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+nav .logo img{
+    width: 20rem;
+}
+
+/* updated code */
+.navigation{
+    font-size: 1.2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.main{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 4rem);
+}
+
+.main .box{
+    position: relative;
+    width: 100%;
+    height: calc((100vh - 4rem) / 4);
+    border-top: 1px solid #ACABAB;
+    border-bottom: 1px solid #ACABAB;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*  */
+.main .box h1{
+    position: relative;
+    font-size: 8.8rem;
+    line-height: 7rem;
+    padding-left: 6rem;
+    font-weight: 500;
+}
+/*  */
+
+.main .box::before, nav::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a47864;
+    z-index: -1;
+    animation: animate 8s linear infinite;
+}
+
+.box span{
+    margin-left: 8rem;
+}
+
+@property --link{
+    
+}
+
+@keyframes animate {
+    0%, 20%{
+        top: 100%;
+    }
+    30%{
+        top: 0%;
+    }
+    40%,50%{
+        top: 0%;
+    }
+
+    70%{
+        top: 0%;
+    }
+    80%{
+        top: -100%;
+    }
+    90%,100%{
+        top: -100%;
+    }
+}
