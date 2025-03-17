@@ -45,8 +45,34 @@ tl
 }, 'b')
 // left and right animation completed
 
+.to(".loading", {
+    display: "none",
+})
+// after the loading animation set it's display none
+
 .from(".bgImage", {
     filter: "brightness(0)",
     duration: 1,
     delay: 0.5,
 })
+
+.to("#svgText path", {
+    strokeDashoffset: 0,
+    duration: 2,
+}, 'd')
+.to("#svgText path", {
+    fill: "#fbf0da",
+    dealy: 3,
+    duration: 3,
+}, 'd')
+
+.from("nav .logo, nav .navigation", {
+    top: 100,
+    opacity: 0,
+    delay: 2,
+}, 'd')
+.from(".box", {
+    top: 100,
+    opacity: 0,
+    delay: 2,
+}, 'd')

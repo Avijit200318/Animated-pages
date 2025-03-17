@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 html, body{
@@ -13,6 +14,7 @@ html, body{
     position: relative;
     width: 100%;
     height: 100vh;
+    color: #fbf0da;
 }
 
 .bgImage{
@@ -25,6 +27,7 @@ html, body{
     background-position: center;
     background-size: 130%;
     filter: brightness(40%);
+    z-index: -1;
 }
 
 .loading{
@@ -103,4 +106,93 @@ html, body{
 
 #line4{
     right: 8%;
+}
+
+nav{
+    height: 5rem;
+    border-bottom: 2px solid #fbf0da;
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav .logo img{
+    width: 4.5rem;
+}
+
+.navigation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.menu{
+    display: block;
+    width: 2rem;
+    height: 0.5rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+a{
+    text-decoration: none;
+    color: #fbf0da;
+    position: relative;
+}
+
+
+#svgText{
+    width: 65rem;
+    height: 20rem;
+}
+
+#svgText path{
+    fill: transparent;
+    stroke: #fbf0da;
+    stroke-width: 2;
+    stroke-dasharray: 4000;
+    /* 4000 in this value the stroke-dasharray value cover the full text. Find it using inspect window*/
+    stroke-dashoffset: 4000;
+    transition: ease-in-out;
+}
+
+.space{
+    height: 40%;
+}
+
+.main{
+    height: calc(100vh - 5rem - 40%);
+    display: flex;
+
+}
+
+.main .text{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .sideText{
+    width: 25%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideText .box{
+    position: relative;
+}
+
+.sideText .box img{
+    width: 8rem;
+}
+
+.sideText .box p{
+    width: 13rem;
+    padding-top: 1rem;
 }
