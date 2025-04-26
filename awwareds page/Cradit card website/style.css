@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    background: #292b2f;
+    color: #ebeae6;
+}
+
+nav{
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem 0 8rem;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#logo img{
+    width: 4rem;
+}
+
+#logo h3{
+    text-transform: uppercase;
+}
+
+.navigation{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #ebeae6;
+}
+
+.page1, .page2, .page3, .page4, .page5{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #ebeae6;
+}
+
+.main{
+    height: calc(100vh - 5rem);
+    display: flex;
+}
+
+.main .left, .main .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 8rem;
+}
+
+.main .right{
+    padding: 2rem 8rem 2rem 2rem;
+}
+
+.main .left h1{
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    width: 90%;
+}
+
+.main .left p{
+    position: relative;
+    width: 90%;
+}
+
+.main .right img{
+    position: absolute;
+    width: 30rem;
+    z-index: 10;
+}
+
+button{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: #ebeae6;
+}
+
+.btn button{
+    padding: 1rem 2rem 1rem 2rem;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.imageBox{
+    position: relative;
+    display: flex;
+    height: 3rem;
+}
+
+.imageBox img{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    left: var(--lft);
+    object-fit: cover;
+}
+
+/* second page style */
+
+.page2, .page3, .page4{
+    padding: 4rem 5rem 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.page2 h1, .page3 h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.innerBox{
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.page2 .box1{
+    width: 14rem;
+    height: 6rem;
+    background: #54535c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: var(--opa);
+}
+
+.box1 i{
+    font-size: 3rem;
+}
+
+/* third page style */
+
+.whiteBtn{
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.box{
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: start;
+}
+
+.box .left{
+    position: relative;
+    width: 50%;
+    height: 20rem;
+    background: #54535c;
+    border-radius: 20px;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.box .mid, .box .right{
+    position: relative;
+    width: 25%;
+    height: 20rem;
+    background: #54535c;
+    border-radius: 20px;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.left .top{
+    height: 80%;
+}
+
+.mid .top, .right .top{
+    position: relative;
+    height: 70%;
+}
+
+.top img{
+    width: 100%;
+}
+
+.mid h3, .right h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* page4 */
+
+.page4{
+    overflow: hidden;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/background.png");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.4);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.content h1{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* 5th page */
+
+.page5{
+    background: url("/images/background2.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page5 img{
+    position: absolute;
+    bottom: -30%;
+}
