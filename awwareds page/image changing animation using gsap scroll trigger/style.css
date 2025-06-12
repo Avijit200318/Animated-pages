@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Yellowtail&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #707070;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page1,
+.page2 {
+    width: 100%;
+    height: 300vh;
+}
+
+.page2{
+    background: white;
+    border-top: 2px solid blue;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    padding: 0 1.5rem 0 1.5rem;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#logo img {
+    width: 3rem;
+}
+
+#logo h3{
+    font-size: 1.6rem;
+    color: #5e52e9;
+}
+
+.navigation {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navigation .links a {
+    padding-left: 3rem;
+}
+
+.navigation button {
+    padding: 0.75rem 1rem;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 25px;
+    border: none;
+    background: #ebebeb;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left,
+.right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.left .bgVideo,
+.left .bgImage {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 42%;
+    z-index: 2;
+}
+
+.left .bgVideo {
+    clip-path: inset(0 0 0 0);
+}
+
+.left .bgImage {
+    opacity: 0;
+    z-index: 1;
+}
+
+.updateBgImage {
+    position: absolute !important;
+    width: 84% !important;
+    top: 200vh !important;
+    left: 0 !important;
+}
+
+.bgVideo video,
+.bgImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right{
+    padding: 6rem 2rem 0 2rem;
+}
+
+.right .hide{
+    overflow: hidden;
+}
+
+.right h1{
+    position: relative;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+.right p{
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.box1{
+    margin-top: 2rem;
+}
+
+.content{
+    width: 70%;
+    padding: 2rem 0 2rem 0;
+    border-bottom: 1px solid #707070;
+}
+
+.content h4{
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+.content p{
+    margin-top: 0;
+    font-size: 0.8rem;
+    font-weight: 100;
+    width: 50%;
+}
+
+.right h2{
+    margin-top: 6rem;
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+.right h5{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+#about{
+    padding: 1rem;
+    width: 10rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    margin-top: 3rem;
+    background: #594ce9;
+    color: white;
+    cursor: pointer;
+}
