@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Yellowtail&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Yellowtail&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.page1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #0044aa;
+    /* background: white; */
+    color: #ffffff;
+}
+
+.page1 .content{
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    /* color: black; */
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+nav .logo{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.4rem;
+    letter-spacing: 1.8px;
+}
+
+.navigation{
+    display: flex;
+    gap: 6rem;
+    padding-right: 3rem;
+}
+
+#menuIcon i{
+    font-size: 1.8rem;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 5rem);
+}
+
+#bgVideo{
+    position: absolute;
+    /* clip-path: inset(35% 45% 35% 45%); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    mix-blend-mode: lighten;
+    z-index: 0;
+}
+
+.container .bottom{
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    bottom: 0;
+    padding: 3rem;
+}
+
+.container .bottom .one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .one .left{
+    width: 40%;
+}
+
+.one .left h1{
+    font-family: "Quicksand", sans-serif;
+    font-size: 7rem;
+    font-weight: 300;
+    line-height: 8rem;
+}
+
+.one .left p{
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+#lastText{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#lastText h3{
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.4rem;
+}
+
+#lastText i{
+    font-size: 2rem;
+}
+
+.bottom .one .right{
+    width: 15rem;
+    height: 15rem;
+    border: 3px solid white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* two */
+.container .bottom .two{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.two .left{
+    width: 23%;
+}
+
+.bottom .two .left h3{
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid white;
+}
+
+.bottom .two .left p{
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.two a h3{
+    font-weight: 400;
+    font-family: "Libre Baskerville", serif;
+    padding-right: 7rem;
+    letter-spacing: 0.5rem;
+}
+
+.bottom .two .right{
+    position: relative;
+    width: 14rem;
+    height: 13rem;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.right video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
