@@ -15,13 +15,14 @@ body {
 }
 
 
-.page1{
+.page1, .nextPage, .page2{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #0044aa;
-    /* background: white; */
-    color: #ffffff;
+    /* background: #0044aa; */
+    background: white;
+    /* color: #ffffff; */
+    color: black;
 }
 
 .page1 .content{
@@ -42,8 +43,8 @@ nav{
 
 a{
     text-decoration: none;
-    color: #ffffff;
-    /* color: black; */
+    /* color: #ffffff; */
+    color: black;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
@@ -72,18 +73,29 @@ nav .logo{
     height: calc(100vh - 5rem);
 }
 
+.box{
+    position: absolute;
+  width: 9.5rem;
+  height: 13rem;
+  background: blue;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
 #bgVideo{
     position: absolute;
-    /* clip-path: inset(35% 45% 35% 45%); */
+    clip-path: inset(35% 45% 35% 45%);
     width: 100%;
     height: 100%;
-    top: 0;
+    /* change top */
+    top: 20%;
     mix-blend-mode: lighten;
+    transition: 0.5s;
     z-index: 0;
 }
 
 .container .bottom{
-    /* display: none; */
     position: absolute;
     width: 100%;
     height: 85%;
@@ -105,14 +117,23 @@ nav .logo{
     font-size: 7rem;
     font-weight: 300;
     line-height: 8rem;
+    /* gs */
+    position: relative;
+  bottom: 55%;
+  left: 75%;
 }
 
 .one .left p{
     font-size: 1.1rem;
     line-height: 1.4rem;
+    /* gs */
+    position: relative;
+  bottom: 55%;
+  left: 75%;
 }
 
 #lastText{
+    position: relative;
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -131,11 +152,14 @@ nav .logo{
 }
 
 .bottom .one .right{
+    position: relative;
     width: 15rem;
     height: 15rem;
+    left: 20%;
     border: 3px solid white;
     border-radius: 30px;
     overflow: hidden;
+    opacity: 0;
 }
 
 .right img{
@@ -152,6 +176,7 @@ nav .logo{
 }
 
 .two .left{
+    position: relative;
     width: 23%;
 }
 
@@ -177,13 +202,233 @@ nav .logo{
     position: relative;
     width: 14rem;
     height: 13rem;
+    left: 20%;
     border-radius: 30px;
     overflow: hidden;
     z-index: 1;
+    opacity: 0;
 }
 
 .right video{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* next page */
+
+.nextPage{
+    position: absolute;
+    padding: 1rem 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+}
+
+.nextPage .top{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.nextPage .top h1{
+    position: relative;
+    /* gsap */
+    /* left: 33%;
+    top: 25%; */
+}
+
+.nextPage .top h1 span{
+    font-family: "Quicksand", sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+#text1{
+    color: #c0afa9;
+}
+
+#text2{
+    color: #032c95;
+}
+
+#textContent{
+    position: relative;
+    width: 40%;
+    /* gsap */
+    /* top: 120%;
+  left: -25%; */
+}
+
+#endText{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#endText h3{
+    font-family: "Quicksand", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+#endText i{
+    font-size: 1.5rem;
+}
+
+/* bottom style */
+.nextPage .bottom{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    gap: 1rem;
+}
+
+#left, #right{
+    width: 45%;
+    height: 100%;
+    border-radius: 20px;
+    /* gs */
+    /* overflow: hidden; */
+    /* overflowhidden line */
+}
+
+#mid{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#mid #firstImage, #mid #secondImage{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+
+    /* gsap */
+    /* width: 10rem;
+    height: 10rem;
+    border-radius: 10px;
+    top: 50%; */
+    /*  */
+
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+#mid #secondImage{
+    height: 60%;
+    /* gsap */
+    /* height: 10rem; */
+}
+
+#right{
+    width: 30%;
+}
+
+#left img, #right img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* gsap */
+    /* width: 10rem;
+    height: 10rem;
+    border-radius: 10px;
+    top: -10%;
+  rotate: -22deg; */
+    /*  */
+}
+
+/* gsap */
+/* #right img{
+    top: 15%;
+    left: 25%;
+} */
+
+/* page2 */
+.page2{
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page2 h2{
+    font-family: "Quicksand", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #0012a4;
+    margin: 6rem 0;
+}
+
+.page2 .slideBox{
+    position: relative;
+    /* background: yellow; */
+    height: 25rem;
+    width: 100%;
+}
+
+.page2 .slider{
+    position: absolute;
+    display: flex;
+    gap: 3rem;
+    max-width: calc(25rem * 10);
+    height: 25rem;
+    left: 0;
+}
+
+.page2 .slider .imgBox{
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page2 .text{
+    width: 50%;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text h3{
+    font-family: "Quicksand", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #0012a4;
+}
+
+.text p{
+    font-size: 1.1rem;
+    color: #032c95;
+}
+
+.text h4{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0012a4;
+    text-transform: uppercase;
+    border-bottom: 2px solid #032c95;
 }
