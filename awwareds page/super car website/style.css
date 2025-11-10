@@ -18,7 +18,8 @@ body {
     color: #fff;
 }
 
-.page1, .page2 {
+.page1,
+.page2 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -56,7 +57,7 @@ nav {
     z-index: 1;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
@@ -70,18 +71,18 @@ a{
     backdrop-filter: blur(5px);
 }
 
-#logo img{
+#logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.navigation{
+.navigation {
     display: flex;
     gap: 2rem;
 }
 
-.navigation a{
+.navigation a {
     width: 8rem;
     height: 3.5rem;
     background: rgba(0, 0, 0, 0.5);
@@ -97,7 +98,7 @@ a{
     overflow: hidden;
 }
 
-#profile{
+#profile {
     padding: 0.5rem 1rem;
     height: 3.5rem;
     background: rgba(0, 0, 0, 0.5);
@@ -108,7 +109,7 @@ a{
     gap: 2rem;
 }
 
-#profile img{
+#profile img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -117,22 +118,22 @@ a{
     overflow: hidden;
 }
 
-#profile p{
+#profile p {
     font-size: 0.9rem;
     color: #ead8d8;
 }
 
-#profile h3{
+#profile h3 {
     font-size: 1.1rem;
     font-family: "Orbitron", sans-serif;
 }
 
 /* active */
-.active{
+.active {
     position: relative;
 }
 
-.active::before{
+.active::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -154,7 +155,9 @@ a{
     z-index: 1;
 }
 
-#top, #bottom, #bottom{
+#top,
+#bottom,
+#bottom {
     width: 100%;
     height: auto;
     display: flex;
@@ -162,22 +165,22 @@ a{
     align-items: center;
 }
 
-#top .left{
+#top .left {
     position: relative;
 }
 
-#top .left h1{
+#top .left h1 {
     font-family: "Orbitron", sans-serif;
     font-size: 4rem;
     font-weight: 500;
 }
 
-#top .left p{
+#top .left p {
     width: 45%;
     color: #ead8d8;
 }
 
-#top .right{
+#top .right {
     position: relative;
     width: 10rem;
     height: 12rem;
@@ -188,7 +191,8 @@ a{
     overflow: hidden;
 }
 
-.right img, #earthImage img{
+.right img,
+#earthImage img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -201,7 +205,7 @@ a{
     gap: 4px;
 }
 
-#bottom .left .option{
+#bottom .left .option {
     width: 10rem;
     height: 3rem;
     background: rgba(0, 0, 0, 0.5);
@@ -215,7 +219,7 @@ a{
     overflow: hidden;
 }
 
-#earthImage{
+#earthImage {
     width: 10rem;
     height: 10rem;
     border-radius: 10px;
@@ -226,11 +230,11 @@ a{
     overflow: hidden;
 }
 
-#bottom .right{
+#bottom .right {
     position: relative;
 }
 
-#info{
+#info {
     width: 10rem;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.5);
@@ -239,17 +243,17 @@ a{
     border-radius: 10px;
 }
 
-#info p{
+#info p {
     font-size: 0.9rem;
     color: #ead8d8;
 }
 
-#info h4{
+#info h4 {
     margin-top: 0.5rem;
     font-size: 1.2rem;
 }
 
-#speed{
+#speed {
     margin-top: 1rem;
     width: 10rem;
     height: 12rem;
@@ -262,7 +266,7 @@ a{
     justify-content: center;
 }
 
-#speed div{
+#speed div {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -275,6 +279,287 @@ a{
     color: #f4e974;
 }
 
-#speed h4{
+#speed h4 {
     font-size: 2.2rem;
+}
+
+/* page2 */
+.page2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.page2 .box {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.box .line {
+    width: 100%;
+    height: 50%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.line .imgBox {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    /* background: blue; */
+    overflow: hidden;
+}
+
+.imgBox h1,
+.imgBox p,
+#rightText {
+    position: absolute;
+    font-family: "Orbitron", sans-serif;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+
+.imgBox h1 {
+    font-size: 3rem;
+    top: 4%;
+    left: 3%;
+    width: 80%;
+}
+
+#rightText {
+    bottom: 5%;
+    right: 3%;
+    width: 33%;
+    /* font-size: 0.8rem; */
+    text-align: end;
+    font-weight: 300;
+}
+
+.imgBox p {
+    left: 3%;
+    bottom: 5%;
+    width: 30%;
+}
+
+.imgBox img,
+#bgVid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bgVid {
+    filter: brightness(0.7);
+}
+
+/* page3 */
+.page3 {
+    width: 100%;
+    height: 100vh;
+}
+
+.page3 h2 {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.5rem 2rem 0.5rem 3rem;
+    color: #bfaaaa;
+    margin-top: 2rem;
+}
+
+.page3 .box {
+    position: relative;
+    width: 100%;
+    height: calc((100vh - 6rem) / 4);
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    cursor: pointer;
+}
+
+.page3 .box::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #0058f4;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.page3 .box:hover::before {
+    height: 100%;
+}
+
+.page3 .box h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 6rem;
+    letter-spacing: 0.5rem;
+    transition: 0.3s;
+}
+
+#shortVideo {
+    position: absolute;
+    top: -75%;
+    right: 32%;
+    width: 12rem;
+    /* height: 16rem; */
+    height: 12rem;
+    opacity: 0;
+    /* background: yellow; */
+    transition: 0.4s;
+}
+
+#shortVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page3 .box:hover h3 {
+    color: black;
+}
+
+.page3 .box:hover #shortVideo {
+    height: 16rem;
+    opacity: 1;
+}
+
+
+/* page4 */
+.page4, .page5 {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.textBox {
+    position: absolute;
+    width: 280%;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    padding: 0 2rem;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+}
+
+#boxDiv {
+    position: relative;
+    width: 280%;
+    height: 25rem;
+}
+
+.textBox h1 {
+    font-size: 17rem;
+    font-family: "Orbitron", sans-serif;
+    color: #0058f4;
+}
+
+#boxDiv img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 10rem;
+    border-radius: 10px;
+    rotate: 8deg;
+    object-fit: cover;
+}
+
+#boxDiv img:nth-of-type(1) {
+    top: 58%;
+    left: 10%;
+}
+
+#boxDiv img:nth-of-type(2) {
+    left: 30%;
+    top: 2%;
+}
+
+#boxDiv img:nth-of-type(3) {
+    left: 55%;
+    top: 58%;
+}
+
+#boxDiv img:nth-of-type(4) {
+    left: 90%;
+    top: 2%;
+}
+
+/* page5 */
+
+.page5, .page6 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page5 .container{
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0 30%);
+}
+
+.page5 .container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1.12;
+}
+
+/* page6 */
+.page6{
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+#topDiv{
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#topDiv h1{
+    font-size: 8rem;
+    font-family: "Orbitron", sans-serif;
+    line-height: 8rem;
+    text-shadow: 0 0 5px #b8b8b8;
+}
+
+#bottomDiv{
+    width: 100%;
+    height: calc(100vh - 8rem);
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+#bottomDiv .videoDiv{
+    width: 33%;
+    height: 85%;
+    overflow: hidden;
+    cursor: pointer;
+}
+#bottomDiv .videoDiv video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
